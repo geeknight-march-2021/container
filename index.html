@@ -5,8 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+      background-color: #eeeef1;
+    }
+    .layout {
+      display: flex;
+      width: 100%;
+
+    }
+    .layout > * {
+      flex: 1 1 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Container</h1>
+  <div class="layout">
+    <div id="login"></div>
+    <div id="search"></div>
+  </div>
+  <script src="http://localhost:64909/static/js/main.js"></script>
+  <script src="http://localhost:5000/static/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      window.searchBootstrap("search")
+      window.loginBootstrap("login")
+    });
+  </script>
 </body>
 </html>
